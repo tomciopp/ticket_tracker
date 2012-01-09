@@ -1,4 +1,11 @@
 TicketTracker::Application.routes.draw do
+  
+  root :to => "Projects#index"
+  
+  resources :projects
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
