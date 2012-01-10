@@ -2,7 +2,9 @@ TicketTracker::Application.routes.draw do
   
   root :to => "Projects#index"
   
-  resources :projects
+  resources :projects do 
+    resources :tickets
+  end
   
   
   
