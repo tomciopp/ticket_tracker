@@ -1,5 +1,7 @@
 TicketTracker::Application.routes.draw do
   
+  devise_for :users
+
   root :to => "Projects#index"
   
   resources :projects do 
