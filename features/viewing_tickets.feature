@@ -11,11 +11,13 @@ Background:
   And "user@ticketee.com" has created a ticket for this project:
     | title             | description                   |
     | Make it shiny!    | Gradients! Starbursts! Oh my! |
+  And "user@ticketee.com" can view the "TextMate 2" project
   And there is a project called "Internet Explorer"
 	And "user@ticketee.com" has created a ticket for this project:
 	  | title                | description      |
 	  | Standards compliance | Isn't a joke.    |
-  
+  And "user@ticketee.com" can view the "Internet Explorer" project
+  And I am signed in as them
   And I am on the homepage
 
   Scenario: Viewing tickets for a given project
