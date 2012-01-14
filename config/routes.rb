@@ -22,4 +22,6 @@ TicketTracker::Application.routes.draw do
   :to => 'admin/permissions#update',
   :as => :update_user_permissions
   
+  resources :files
+  
 end
