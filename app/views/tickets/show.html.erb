@@ -1,5 +1,6 @@
-<br><small>Created by <%= @ticket.user.email %></small>
 <div id='ticket'>
+	<br><small>Created by <%= @ticket.user.email %></small>
+	<%= render @ticket.state if @ticket.state %>
 	<h2><%= @ticket.title %></h2>
 	<%= simple_format(@ticket.description) %>
   <% if @ticket.assets.exists? %>
