@@ -12,7 +12,12 @@ TicketTracker::Application.routes.draw do
   end
   
   resources :tickets do 
-    resources :comments
+    resources :comments 
+    resources :tags do
+      member do 
+        delete :remove
+      end 
+    end
   end
   
   namespace :admin do 
