@@ -15,6 +15,7 @@ class Ticket < ActiveRecord::Base
     tags = tags.split(" ").map do |tag|
       Tag.find_or_create_by_name(tag)
     end
+    
     self.tags << tags
   end
 end
