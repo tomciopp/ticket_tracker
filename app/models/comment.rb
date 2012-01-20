@@ -1,7 +1,7 @@
 class Comment < ActiveRecord::Base
   before_create :set_previous_state
   after_create :set_ticket_state
-  
+  after_create :creator_watches_ticket
   
   belongs_to :user
   belongs_to :ticket
@@ -22,5 +22,9 @@ class Comment < ActiveRecord::Base
     
     def set_previous_state
       self.previous_state = ticket.state
+    end
+    
+    def creator_watches_ticket
+      ticket.watchers << user
     end
 end
