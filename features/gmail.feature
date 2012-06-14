@@ -30,4 +30,4 @@ Scenario: Receiving a real world email
   When I log into gmail with:
     | username               | password          |
     | dev.ciopte7@gmail.com  | examplepassword   |
-  
+  Then there should be an email from Ticketee in my inbox

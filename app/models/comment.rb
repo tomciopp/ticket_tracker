@@ -9,7 +9,7 @@ class Comment < ActiveRecord::Base
   belongs_to :previous_state, :class_name => "State"
   
   delegate :project, :to => :ticket
-  
+
   validates :text, :presence => true
   
   
@@ -25,6 +25,6 @@ class Comment < ActiveRecord::Base
     end
     
     def creator_watches_ticket
-      ticket.watchers << user
+      ticket.watchers << user 
     end
 end

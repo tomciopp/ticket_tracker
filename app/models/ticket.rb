@@ -18,6 +18,7 @@ class Ticket < ActiveRecord::Base
   
   after_create :creator_watches_me
   
+  
   validates       :title, :presence => true
   validates :description, :presence => true, :length => {:minimum => 10 }
   

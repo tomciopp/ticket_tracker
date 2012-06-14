@@ -40,6 +40,7 @@ Scenario: Changing a ticket's state
   Then I should see "Comment has been created."
   And I should see "Open" within "#ticket .state"
   Then I should see "State: Open" within "#comments"
+  Then show me the page
 
 Scenario: A user without permission cannot change the state
   When I follow "Change a ticket's state"
